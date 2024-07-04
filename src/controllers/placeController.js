@@ -57,3 +57,14 @@ exports.getCities = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+// Get all places
+exports.getPlaces = async (req, res) => {
+  try {
+    const places = await Place.find();
+    res.status(200).json(places);
+  } catch (error) {
+    console.error("Error fetching places:", error);
+    res.status(500).json({ error: error.message });
+  }
+};

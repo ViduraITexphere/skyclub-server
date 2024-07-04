@@ -6,5 +6,6 @@ const suggestController = require("../controllers/suggestController");
 router.post("/", placeController.createPlace);
 router.post("/itinerary", suggestController.generateItinerary);
 router.get("/cities", placeController.getCities);
+router.get("/place", placeController.getPlaces);
 
 module.exports = router;
